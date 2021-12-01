@@ -2,11 +2,13 @@ from DFO.fitness import fit
 from DFO.best_neighbour import findBestNeighbour
 from DFO.update import update
 import numpy as np
+import time
 
 def DFO(maxIterations, swarm, distanceTable, startNode, delta = 0.001, checkEdges=False):
 
     overallFitness = []
 
+    start_time = time.time()
     for iteration in range(maxIterations):
         fitnessTable = fit(swarm, distanceTable)
 
@@ -21,4 +23,5 @@ def DFO(maxIterations, swarm, distanceTable, startNode, delta = 0.001, checkEdge
     print(f"Final best fitness: {overallFitness[np.argmin(overallFitness)]}")
     print(f"Final best fly: {swarm[np.argmin(overallFitness)]}")
 
+    print("--- %s seconds ---" % (time.time() - start_time))
     return swarm[np.argmin(overallFitness)]
