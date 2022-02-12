@@ -4,7 +4,7 @@ from DFO.update import update
 import numpy as np
 import time
 
-def DFO(maxIterations, swarm, distanceTable, startNode, delta = 0.001, checkEdges=False):
+def DFO(maxIterations, swarm, distanceTable, startNode, delta = 0.001):
 
     overallFitness = []
 
@@ -16,7 +16,7 @@ def DFO(maxIterations, swarm, distanceTable, startNode, delta = 0.001, checkEdge
             print(f"Iteration {iteration}, Best fly: {np.argmin(fitnessTable)}, Fitness Value: {fitnessTable[np.argmin(fitnessTable)]}")
 
         bestNeighbourTable = findBestNeighbour(swarm, fitnessTable)
-        update(swarm, bestNeighbourTable, fitnessTable, delta, startNode, distanceTable, checkEdges)
+        update(swarm, bestNeighbourTable, fitnessTable, delta, startNode)
         overallFitness = fitnessTable
 
     print()

@@ -38,8 +38,8 @@ def plot(cities, swarm, distanceTable, showAllEdges):
                                 if edge['linkedNode'] == nextFly:
                                     x.append(edge['x'])
                                     y.append(edge['y'])
-                    plt.plot(x, y, label=f"Distance/Cost: {distanceTable[currentFly][nextFly]}", linewidth=2)
+                    plt.plot(x, y, label=f"Distance/Cost: {distanceTable[currentFly][nextFly]}", linewidth=2.5)
 
-    plt.legend(bbox_to_anchor=(1.05, 1.0), loc='upper left', ncol=2)
+    plt.legend(bbox_to_anchor=(1.05, 1.0), loc='upper left', ncol=5)
     plt.tight_layout()
     plt.show()
