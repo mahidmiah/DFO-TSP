@@ -56,4 +56,4 @@ def runAlgorithm(dataset, swarmSize = 800, maximumIterations = 9000, disturbance
         plot(cities, [bestPath[0]], distanceTable, True, [bestPath[1]])
 
 if __name__ ==  '__main__':
-    runAlgorithm("TSPs/wi29.tsp", multipleSwarmsApproach=False, visualise=True)
+    runAlgorithm("TSPs/wi29.tsp")

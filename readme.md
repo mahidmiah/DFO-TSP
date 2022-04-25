@@ -1,7 +1,7 @@
-# Dispersive Flies Optimisaition (DFO) for solving the Travelling Salesman Problem (TSP)
+# Dispersive Flies Optimisation (DFO) for solving the Travelling Salesman Problem (TSP)
 ### Name: Mahid Miah - Student ID: 001063915
 
-In order to run the DFO algorithm on a TSP, please input the directory/location of the given TSP inside of the 'runAlgorithm' 
+In order to run the DFO algorithm on a TSP, please input the directory/location of the given TSP inside the 'runAlgorithm' 
 function as its parameter. For example, to use the 'wi29' TSP dataset from the 'TSPS' directory you would do the following:
 
 ```python
@@ -12,11 +12,11 @@ if __name__ ==  '__main__':
 ## Parameter options
 The algorithm consists of various different paramters which include the following:
 
-* **dataset** - this paramater is the location of the dataset that is being solved - **and has no default value**.
+* **dataset** - this parameter is the location of the dataset that is being solved - **and has no default value**.
 * **swarmSize** - the size of the swarm - **has the default value of 800**.
 * **maximumIterations** - the maximum number of iterations the algorithm will run for - **has default value of 9000**.
 * **disturbanceThreshold** - the disturbance threshold value for the swarm(s) - **has default value of 0.001**.
-* **multipleSwarmsApproach** - the multiple swarms appraoch for resolving the local optimum trap, it can be either set 
+* **multipleSwarmsApproach** - the multiple swarms approach for resolving the local optimum trap, it can be either set 
   to True or False - **has the default value of True**.
 * **numberOfSwarms** - the number of swarms that will be used to solve the given TSP (this parameter will only be used 
   if the previous parameter is set to True) - **has the default value of 5**.
@@ -73,7 +73,7 @@ if __name__ ==  '__main__':
 ```
 
 Were rather than a string location value of a TSP file being inputted, a list object is inputted with the number of nodes, 
-lower bound, and upper bound. So in the example above, using the inputted paramaters, a randomly genereted TSP with 14 
+lower bound, and upper bound. So in the example above, using the inputted parameters, a randomly generated TSP with 14 
 nodes within the bounds of 0 and 1000 will be generated and solved by the algorithm.
 
 ### Saving outputted solutions
@@ -88,7 +88,7 @@ As seen from the example image, the image shows the most optimal path using the 
 by the coloured dots, and the grey lines represent all the possible different paths that can be taken between the various
 nodes in the given TSP. The image also shows the given path/tour with its fitness value.
 
-It should also be noted that the other avaiable paramter options can also be used with randomly generated TSPs. For example
+It should also be noted that the other available paramter options can also be used with randomly generated TSPs. For example
 if you would like to run the algorithm using 10 swarms and also enable the visualisation feature you would do the following:
 
 ```python
@@ -118,8 +118,8 @@ if __name__ ==  '__main__':
 
 This algorithm/application makes use of various different packages which include the following:
 
-* **Numpy** - Which is used by the algorith/application for mathematical calculations/procedures.
-* **Matplotlib** - Which is used by the algorith/application in order to plot/display any given solution on a graph, 
+* **Numpy** - Which is used by the algorithm/application for mathematical calculations/procedures.
+* **Matplotlib** - Which is used by the algorithm/application in order to plot/display any given solution on a graph, 
   used to show the live swarm, and also to save the final outputted solution in the 'Outputs' folder in the form of an image file.
 * **Multiprocessing** - Which is used for the Multiple Swarms Approach in order to make multiple Swarm/DFO processes to run
   simultaneously.
