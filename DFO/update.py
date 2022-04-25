@@ -18,10 +18,11 @@ def update(swarm, bestNeighbourTable, fitnessTable, delta, citiesObj, visualise,
 
         def update_dimensions():
             for dimension in range(len(swarm[fly])):  # Loops through each dimension within the flies solution.
-                # Original disturbance threshold code.
+
+                # Checks if the 'u' is less then the disturbance threshold.
                 if np.random.rand() < delta:
-                    swarm[fly][dimension] = np.random.choice(cities)
-                    continue
+                    swarm[fly][dimension] = np.random.choice(cities) # Resets the dimension.
+                    continue # Skips to the next dimension in the solution.
 
                 # Updates the flies current dimension in loop.
                 u = np.random.rand()
@@ -50,6 +51,7 @@ def update(swarm, bestNeighbourTable, fitnessTable, delta, citiesObj, visualise,
         if fly == bestFly: continue  # ELITIST STRATEGY
         mainUpdate(fly)
 
+        # Visualisation feature of the algorithm/application.
         if visualise == True:
 
             def get_fly_coordinates(fly):

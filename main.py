@@ -57,5 +57,3 @@ def runAlgorithm(dataset, swarmSize = 800, maximumIterations = 9000, disturbance
 
 if __name__ ==  '__main__':
     runAlgorithm("TSPs/wi29.tsp", multipleSwarmsApproach=False, visualise=True)
-    # runAlgorithm([14, 0, 1000])
-

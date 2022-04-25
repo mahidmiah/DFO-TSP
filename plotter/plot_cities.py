@@ -2,13 +2,17 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 
 def plot(cities, swarm, distanceTable, showAllEdges, fitnessValue):
+
+    # Plots all the cities/nodes on the graph.
     for city in cities:
         plt.scatter(city.x, city.y, label=f"City: {city.node}", s=20, zorder=5)
 
+    # Shows the 'grey' lines in the outputted solution graph which are all the possible paths/routes that can be taken.
     for city in cities:
         for edge in city.edges:
             plt.plot((city.x, edge['x']), (city.y, edge['y']), c='lightgrey')
 
+    # Shows the solution path/route.
     if showAllEdges == True:
         for fly in range(len(swarm)):
             for dimension in range(len(swarm[fly])):
@@ -46,5 +50,8 @@ def plot(cities, swarm, distanceTable, showAllEdges, fitnessValue):
     plt.legend(bbox_to_anchor=(1.05, 1.0), loc='upper left', ncol=5)
     plt.tight_layout()
 
+    # Saves the solution figure into the 'Outputs' folder.
     plt.savefig("Outputs/" + str(datetime.now().strftime("[%d-%m-%Y] [%H-%M-%S]")) + ".png")
+
+    # Displays the solution.
     plt.show()
